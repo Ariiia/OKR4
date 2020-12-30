@@ -1,3 +1,5 @@
+ 
+
 * {
     padding: 0;
     margin: 0;
@@ -6,38 +8,108 @@
     text-decoration:none;
 }
 
-div#logo{
-    float: left;
+body{
+    padding-top:1rem;
 }
-div#menu{
-    float: right;
+
+div.menu{
+    font-size: larger;
+    margin-top: 4rem;
+    margin-left:-30%;
 }
-/* .pre-header-box{
-    float:left; 
+
+.container{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    transition:0.5s;
+    padding: 30px 100px;
+    z-index:999;
+
 }
-.header-box{
-    float:left; 
-}  */
 
 header{
-    padding:10px 100px;
+    position: sticky;
+    top: 0;
+    left:0;
+    z-index:999;
+    background-color: rgba(255, 255, 255, 0.7);
+  
+}
+
+
+.container .logo{
+    position: sticky;
+    top:50px;
+    left:0;
+     text-decoration: none; 
+    font-size: 2em;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+.horizontal-list{
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+
+ }
+ .horizontal-list li{
+    position: relative;
+    margin-right:15px;
+ }
+
+ .horizontal-list li a{
+    /* padding-right:10px; */
+
+    position: relative;
+    transition:1s;
+    letter-spacing:2px;
+    text-decoration: none; 
+
+ }
+
+header{
+     padding:10px 100px; 
     box-sizing:border-box;
-    width:100%;
-    height:100vh;
+    /* width:100%;
+    height:100vh; */
     box-sizing: auto;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+
+}
+.logo-container{
+    width:100%;
+    height:100vh;
+}
+.delivery-container a{
+    color:black;
+}
+ul a{
+ color:black;
 }
 
 
  .logo img{
     max-width:30%;
 }
+.menu ul{
+    display:flex;
+}
 
 
 .menu{
-    display: table;
+   box-sizing: border-box;
+   height:auto;
     margin:0 auto;
 
 }
@@ -46,8 +118,12 @@ li{
     display: inline-block;
     
 }
-.container {
-    width: 100%;    
+.container { 
+    display: flex;
+    position: static;
+    transition: .3s cubic-bezier(.25,.8,.5,1);
+    width: 100%;   
+    height:5rem; 
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -70,7 +146,9 @@ footer {
     white-space: normal;
     font-family: Gilroy,Arial,sans-serif
 }
-
+footer a{
+    color:white;
+}
 .footer-top-row {
     width: 100%;
     display: flex;
@@ -196,7 +274,7 @@ footer {
 
 
 .link-ava span::before {
-    content: "\F03F2";
+ 
     color: #fff;
     display: inline-block;
     font: normal normal normal 24px/1 "Material Design Icons";
