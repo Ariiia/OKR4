@@ -1,12 +1,22 @@
 import Home from "./home.js"
-
+import Product from "./product.js"
+import Catalog from "./catalog.js"
 
 let homePage = new Home();
+let productPage = new Product();
+let catalogPage = new Catalog();
 
 let routs = {
     "home": '',
     "product": ['caramel', 'orangechoco', 'lavliheart', 'mangochia', 'strawberryyogurt',
-                'brauni', 'caramelyoghurt', 'strawberryyoghurt', 'cherry', 'marakuya',]
+                'brauni', 'caramelyoghurt', 'strawberryyoghurt', 'cherry', 'marakuya'],
+    "catalog": ''
+}
+
+let pages = {
+    "home": homePage,
+    "product": productPage,
+    "catalog": catalogPage
 }
 
 function changePage(){
@@ -38,11 +48,15 @@ function changePage(){
 function loadContent(route, hash=null) {
     if (route in routs) {
         if (hash != null && routs[route].includes(hash)) {
-            //load page this.hub.loadByHash(route, hash);
+            let page = pages[route];
+            if(!page.loadPage(hash))
+                homePage.loadHome();
             return true;
         }
         else if (hash == null){
-            //load page this.hub.loadByHash(route);
+            let page = pages[route];
+            if(!page.loadPage(hash))
+                homePage.loadHome();
             return true;
         }
     }
@@ -52,12 +66,8 @@ function loadContent(route, hash=null) {
 
 
 (function () {
+
     window.addEventListener('hashchange', () => changePage(homePage));
-
-
-    
-
-
 
     homePage.loadHome();
 

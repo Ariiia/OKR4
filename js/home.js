@@ -5,13 +5,18 @@ export default class Home {
         this.hash = 'home';
     }
 
+    loadPage(){
+        loadHome();
+        return true;
+    }
+
     async loadHome(){
 
         const page = document.getElementById("page-content");
 
         let products = await getDB('https://my-json-server.typicode.com/Ariiia/OKR4/products');
 
-        let products_to_show = Object.entries(products).slice(0,3).map(entry => entry[1]); // slice object
+        let products_to_show = Object.entries(products).slice(0,3).map(entry => entry[1]); // slice object to first 3
 
         page.innerHTML = `
             <div class="slider middle">
@@ -50,12 +55,12 @@ export default class Home {
 
         products_to_show.forEach(cake => {
             products_to_show_content += `
-            <div class="child">
-                <a href="#product/${cake.url}">    
-                    <img src="${cake.image}" width="500" height="500" alt="${cake.image}">
-                    <h3>${cake.title}</h3>
-                </a>
-            </div>
+                <div class="child">
+                    <a href="#product/${cake.url}">    
+                        <img src="${cake.image}" width="500" height="500" alt="${cake.image}">
+                        <h3>${cake.title}</h3>
+                    </a>
+                </div>
             `;
         });
 
