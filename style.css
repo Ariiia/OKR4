@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box; 
+    list-style:none;
+    text-decoration:none;
+}
+
+div#logo{
+    float: left;
+}
+div#menu{
+    float: right;
+}
+/* .pre-header-box{
+    float:left; 
+}
+.header-box{
+    float:left; 
+}  */
+
+header{
+    padding:10px 100px;
+    box-sizing:border-box;
+    width:100%;
+    height:100vh;
+    box-sizing: auto;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+ .logo img{
+    max-width:30%;
+}
+
+
+.menu{
+    display: table;
+    margin:0 auto;
+
+}
+
+li{
+    display: inline-block;
+    
+}
+.container {
+    width: 100%;    
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* FOOTER */
+footer {   
+    background-color: rgb(244, 244, 244);
+    border-radius: 4px;
+    color: rgba(0,0,0,.87);
+    border-width: thin;
+    display: block;
+    max-width: 100%;
+    outline: none;
+    text-decoration: none;
+    overflow-wrap: break-word;
+    position: relative;
+    white-space: normal;
+    font-family: Gilroy,Arial,sans-serif
+}
+
+.footer-top-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 12px;
+    align-items: center;
+}
+
+.visa-master-card {
+    flex: 33.3%;
+    max-width: 33.3%;
+    width: 100%;
+    padding: 12px;
+    align-self: center;
+}
+
+.image-container {
+    max-width: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin-left: 56px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-message {
+    color: rgb(62, 62, 62);
+    flex: 33.3%;
+    max-width: 33.3%;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    align-self: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: .0125em;
+    line-height: 2rem;
+}
+
+.informational-links {
+    flex: 22%;
+    max-width: 22%;
+    padding: 12px;
+}
+
+.informational-links ul {
+    list-style: none;
+}
+
+.informational-links ul li {
+    text-align: right;
+    padding: 0;
+    font-weight: 300;
+    margin-bottom: 16px;
+    width: 100%; 
+}
+
+.informational-links ul li a {
+    font-size: 1.25rem;
+    color: rgb(62, 62, 62);
+    background-color: transparent;
+}
+
+.footer-bottom-row {
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.connection-links {
+    flex: 25%;
+    max-width: 25%;
+    padding: 12px;
+}
+
+.connection-link-container {
+    color: rgba(0,0,0,.87);
+    display: block;
+    padding: 8px 0;
+    position: static;
+    transition: .3s cubic-bezier(.25,.8,.5,1);
+}
+
+.connection-link-container:hover {
+    background-color: rgb(63, 63, 63, .05);
+}
+
+.connection-link-container a {
+    min-height: 64px;
+    display: flex;
+    letter-spacing: normal;
+    align-items: center;
+    outline: none;
+    padding: 0 16px;
+    position: relative;
+    text-decoration: none;
+}
+
+.link-ava {
+    height: 40px;
+    min-width: 40px;
+    background-color: rgb(63, 63, 63);
+    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-right: 16px;
+    align-items: center;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    align-self: center;
+}
+
+
+.link-ava span::before {
+    content: "\F03F2";
+    color: #fff;
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: inherit;
+}
+
+.link-ava span::after {
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(1.3);
+    width: 100%;
+    transition: opacity .2s cubic-bezier(.4,0,.6,1);
+}
+
+.con-link-info {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    overflow: hidden;
+    padding: 12px 0;
+    opacity: 0.87;
+    color: black;
+    line-height: 1.2;
+}
+
+.con-link-info-title {
+    margin-bottom: 2px;
+    align-self: center;
+    font-size: .9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 100%;
+}
+
+.con-link-info-subtitle {
+    font-size: .8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 100%;
+    opacity: 0.6;
+}
+
+/* /FOOTER */
