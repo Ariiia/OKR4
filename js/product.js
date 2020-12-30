@@ -1,5 +1,3 @@
-import {getDB} from "./ManagmentDB.js"
-
 export default class ProductPage {
     constructor(){
         this.hash = "product";
@@ -7,6 +5,6 @@ export default class ProductPage {
         
     }
     
-    loadProduct(){
+    loadProduct(){}
 
     }
