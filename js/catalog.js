@@ -7,15 +7,31 @@ export default class Catalog {
     }
 
     loadPage(subHash) {
-        this.loadCatalog();
+        this.loadCatalog(subHash);
         return true;
     }
 
-    async loadCatalog() {
+    async loadCatalog(subHash) {
         const page = document.getElementById("page-content");
         
         let products = await getDB('https://my-json-server.typicode.com/Ariiia/OKR4/products');
         
+        if(subHash != null){
+            if (subHash == 'Deserts'){
+                products = products.filter(product => {
+                    return product.category === 'Десерты';
+                }); 
+            } else if (subHash == 'Cakes'){
+                products = products.filter(product => {
+                    return product.category === 'Торты';
+                }); 
+            } else if (subHash == 'Cheesecakes'){
+                products = products.filter(product => {
+                    return product.category === 'Чизкейки';
+                }); 
+            }
+        }
+
 
         page.innerHTML = `
             <h6>Наши сладости</h6>

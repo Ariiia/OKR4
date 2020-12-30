@@ -10,7 +10,7 @@ let routs = {
     "home": '',
     "product": ['caramel', 'orangechoco', 'lavliheart', 'mangochia', 'strawberryyogurt',
                 'brauni', 'caramelyoghurt', 'strawberryyoghurt', 'cherry', 'marakuya'],
-    "catalog": ''
+    "catalog": ['Deserts', 'Cakes', 'Cheesecakes']
 }
 
 let pages = {
@@ -19,12 +19,47 @@ let pages = {
     "catalog": catalogPage
 }
 
+const loader = `
+    <div class="svg-loader">
+    <svg version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+        <circle fill="black" stroke="none" cx="6" cy="50" r="6">
+            <animate
+            attributeName="opacity"
+            dur="1s"
+            values="0;1;0"
+            repeatCount="indefinite"
+            begin="0.1"/>    
+        </circle>
+        <circle fill="black" stroke="none" cx="26" cy="50" r="6">
+            <animate
+            attributeName="opacity"
+            dur="1s"
+            values="0;1;0"
+            repeatCount="indefinite" 
+            begin="0.2"/>       
+        </circle>
+        <circle fill="black" stroke="none" cx="46" cy="50" r="6">
+            <animate
+            attributeName="opacity"
+            dur="1s"
+            values="0;1;0"
+            repeatCount="indefinite" 
+            begin="0.3"/>     
+        </circle>
+    </svg>
+    </div>
+`
+
 function changePage(){
+    document.getElementById("page-content").innerHTML = loader;
+
     const url = window.location.hash.substring(1);
     const splitedUrl = url.split('/');
 
     let hash;
     let subHash;
+    console.log(splitedUrl)
 
     if (splitedUrl.length == 2){
         hash = splitedUrl[0];

@@ -46,7 +46,7 @@ export default class Product {
             
                 <!-- Product Pricing -->
                 <div class="product-price">
-                    <span>${cake.price}</span>
+                    <span>${cake.price} ₴</span>
                     <a href="#" class="cart-btn">В корзину</a>
                 </div>
                 </div>

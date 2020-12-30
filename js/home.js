@@ -3,6 +3,7 @@ import {getDB} from "./ManagmentDB.js"
 export default class Home {
     constructor (){
         this.hash = 'home';
+
     }
 
     loadPage(){
@@ -11,6 +12,7 @@ export default class Home {
     }
 
     async loadHome(){
+        history.pushState(null, null, '#home');
 
         const page = document.getElementById("page-content");
 
