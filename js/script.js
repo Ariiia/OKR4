@@ -100,6 +100,8 @@ function loadContent(route, hash=null) {
 }
 
 
+
+
 (function () {
 
     window.addEventListener('hashchange', () => changePage(homePage));
@@ -108,3 +110,13 @@ function loadContent(route, hash=null) {
 
     
 })();
+
+
+
+// window.addEventListener("scroll", function(){
+
+//     // menu
+//         let header=document.querySelector("pre-header-box");
+//     header.classList.toggle("sticky", window.scrollY>0);
+    
+//     })

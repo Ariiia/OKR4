@@ -33,7 +33,7 @@ div.menu{
 }
 
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
     left:0;
     z-index:999;
@@ -63,6 +63,7 @@ svg {
     font-size: 2em;
     text-transform: uppercase;
     transition: 1s;
+    padding-top: 3rem;
 }
 
 .horizontal-list{

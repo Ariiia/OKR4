@@ -16,25 +16,30 @@ export default class Catalog {
         
         let products = await getDB('https://my-json-server.typicode.com/Ariiia/OKR4/products');
         
+        let category_title = 'сладости';
+
         if(subHash != null){
             if (subHash == 'Deserts'){
                 products = products.filter(product => {
                     return product.category === 'Десерты';
                 }); 
+                category_title = 'десерты'
             } else if (subHash == 'Cakes'){
                 products = products.filter(product => {
                     return product.category === 'Торты';
                 }); 
+                category_title = 'торты'
             } else if (subHash == 'Cheesecakes'){
                 products = products.filter(product => {
                     return product.category === 'Чизкейки';
-                }); 
+                });
+                category_title = 'чизкейки'
             }
         }
 
 
         page.innerHTML = `
-            <h6>Наши сладости</h6>
+            <h6>Наши ${category_title}</h6>
             <div class="GRID">
                 
                 ${this.loadProducts(products)}

@@ -74,7 +74,7 @@ export default class Home {
         // sliderLogic
         let i = 0;
         let inputs = [];
-        let time = 3000;
+        let time = 5000;
                     
         inputs[0] = document.getElementById("r1");
         inputs[1] = document.getElementById("r2");
