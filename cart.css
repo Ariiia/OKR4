@@ -6,7 +6,6 @@
     box-sizing:border-box; 
     list-style:none;
     text-decoration:none;
-    font-family: Georgia, serif;
 }
 
 body{
@@ -50,24 +49,12 @@ svg {
     z-index:999;
 }
 
-.carting{
-        font-size: 0.9rem;
-        font-weight: 900;
-        position: absolute;
-        height: 0.9rem;
-        width: 0.6rem;
-    
-}
-
 .svg-loader {
     width: 100%;
     height: 200px;
     padding-left: 50vw;
 }
 
-#page-content{
-    margin-top: 10rem;
-  }
 .container .logo{
     position: sticky;
     top:50px;
@@ -356,3 +343,116 @@ footer a{
 }
 
 /* /FOOTER */
+main{
+  margin-top: 10rem;
+  margin-left:10%;
+}
+
+/* CART */
+.cart-top{
+  text-align: center;
+}
+
+
+.cart-content {
+  padding: 20px;
+  position: relative;
+}
+
+
+
+.remove-from-cart {
+  position: relative;
+  margin-left:50px;
+  color: #f00;
+  line-height: 1;
+  font-size: 2rem;
+}
+
+.item-image{
+  vertical-align: middle;
+border-style: none;
+margin-bottom: 1rem;
+}
+.input-text{
+  text-align:center;
+  align-items: center;
+}
+.cart-description, .item-image{
+  width:calc(100%-1rem);
+  float:left;
+}
+.quantity{
+  align-items: center;
+  margin-top:1rem ;
+  margin-bottom: 1rem;
+}
+
+.cart-desert{
+  border-bottom: 1px solid #b4b4b4;
+}
+
+.cart-text{
+  margin-right: 5rem;
+}
+.cart-description{
+  padding-left: 20rem;
+}
+.item-name{
+    padding-right: 10px;
+    display: inline-block;
+}
+.quantity{
+  /* border: 1px solid gray; */
+  width:100%;
+}
+.total strong{
+  margin-right:5rem ;
+  
+}
+.total{
+  margin-bottom: 1rem;
+}
+.cart-content{
+font-size: 26px;
+font-weight: 300;
+color: #43474D;
+margin-right: 20px;
+}
+.cart-text{
+  color:black;
+}
+
+.input-text{
+  border: 1px solid #e68b8b;
+  font-size: 24px;
+  margin-left:-1rem;
+}
+
+.button{
+  display: inline-block;
+background-color: #f798bc;
+border-radius: 6px;
+font-size: 16px;
+color: #FFFFFF;
+text-decoration: none;
+padding: 12px 30px;
+transition: all .5s;
+}
+.checkout{
+margin-left: inherit;
+
+
+}
+ 
+.cart-top{
+ 
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  
+  
+}
+
+ 

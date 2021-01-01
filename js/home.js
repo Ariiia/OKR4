@@ -28,9 +28,9 @@ export default class Home {
                     <input type="radio" name="r" id="r2">
                     <input type="radio" name="r" id="r3">
             
-                    <div class="slide s1"><img src="images/bg1.jpg" alt="bg1"></div>
-                    <div class="slide"><img src="images/bg_2.jpg" alt="bg2"></div>
-                    <div class="slide"><img src="images/bg3.jpg" alt="bg3"></div>
+                    <div class="slide s1"><img src="images/bg1 - Copy.jpg" alt="bg1"></div>
+                    <div class="slide"><img src="images/bg_2 - Copy.jpg" alt="bg2"></div>
+                    <div class="slide"><img src="images/bg3 - Copy.jpg" alt="bg3"></div>
                 </div>
             
                 <div class="navigation">
