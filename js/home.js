@@ -18,7 +18,7 @@ export default class Home {
 
         let products = await getDB('https://my-json-server.typicode.com/Ariiia/OKR4/products');
 
-        let products_to_show = Object.entries(products).slice(0,3).map(entry => entry[1]); // slice object to first 3
+        let products_to_show = Object.entries(products).slice(0,4).map(entry => entry[1]); // slice object to first 4
 
         page.innerHTML = `
             <div class="slider middle">
@@ -44,6 +44,7 @@ export default class Home {
 
             <div class="insides">
                 <h1>Без сахара, лактозы, муки и прочей чепухи </h1>
+                <p>Наши хиты </p>
                 <div class="parent">
                     ${this.homeProducts(products_to_show)}
                 </div>

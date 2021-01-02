@@ -52,7 +52,7 @@ export default class Order {
                     </div>
                     <div>
                         <label for="card">Номер карты</label>
-                        <input type="text" name="card" id="card" pattern="^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$" minlength="16" maxlength="16" placeholder="Ваш номер карты" required>  
+                        <input type="text" name="card" id="card" pattern="(^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$)|(^4[0-9]{12}(?:[0-9]{3})?$)" minlength="16" maxlength="16" placeholder="Ваш номер карты" required>  
                     </div>
                     <div class="form-group" id="expiration-date">
                         <label for="expiration">Конец действия карты</label>       

@@ -7,6 +7,7 @@
     font-family: Georgia, serif;
 }
 
+
 body{
     padding-top:1rem;
 }
@@ -63,10 +64,9 @@ svg {
     padding-left: 50vw;
 }
 
-#page-content{
-    margin-top: 10rem;
+main{
+    margin-left: none;;
 }
-
 .container .logo{
     position: sticky;
     top:50px;
@@ -357,7 +357,6 @@ footer a{
 
 #page-content{
     margin-top: 10rem;
-    margin-bottom: 5rem;
 }
 
 .slider{ 
@@ -435,9 +434,15 @@ input[name="r"]{
 }
 
 /* AFTER SLIDER */
-h1{
+.insides h1{
     text-align: center;
     font-size: 5rem;
+}
+.insides p {
+    text-align: center;
+    font-size: 2rem;
+    margin-top:4rem;
+    font-weight:600;
 }
     
 .parent {
@@ -457,13 +462,10 @@ h1{
 .child {
     position: relative;
     flex: 0 0 400px;
-     /* //  If we do want the items to stretch: */
-    /* flex: 1 1 300px; */
-        
-    border: 1px solid rgb(204, 204, 204);
     font-size: 2rem;
     text-align: center;
 }
+
       
 h2,h3,h4,h5 { 
     position: absolute; 
@@ -589,8 +591,8 @@ html, body {
 /* CATALOGUE */
 h6 {
     text-align:center;
-    padding-bottom:1rem;
-    padding-top: 3rem;
+    padding-bottom:3rem;
+    padding-top: 1rem;
     font-size: 2rem;
     font-weight: 700;
 }
@@ -609,7 +611,8 @@ h6 {
 }   
 
 .onedes img {
-    width:50%;    
+    width:40%;    
+    height:60%; 
 }     
 
 .onedes {
@@ -670,6 +673,7 @@ strong {
 .act-description{
    font-size: 1.8rem;
 }
+
 
 /* /ACTIONS */
  
