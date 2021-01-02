@@ -1,12 +1,13 @@
-import {getDB, sendRequest} from "./mainDB.js"
+import {sendRequest} from "./mainDB.js"
 
 export default class Order {
-    constructor(){
+    constructor(cart){
         this.hash = "order";
+
+        this.cart = cart
     }
 
-    async loadPage(subHash){
-        this.products = await getDB('https://my-json-server.typicode.com/Ariiia/OKR4/products');
+    loadPage(subHash){
         if (subHash == null){
             this.loadValidation();
         }
@@ -112,7 +113,7 @@ export default class Order {
             let clientData = {clientInformation, clientOrder};
 
             sendRequest('POST', "https://my-json-server.typicode.com/Ariiia/OKR4/orders", JSON.stringify(clientData))
-                .then( data => {
+                .then( data => {    
                     this.loadOrder(data.id, clientInformation);
                     
                 })
@@ -170,6 +171,8 @@ export default class Order {
                 </div>       
             </div>
         `;
+        this.cart.clearCart()
+
     }
 
     orderedItems() {
@@ -180,7 +183,7 @@ export default class Order {
             itemsInCart.push(item.url);
         });
 
-        let itemsToShow = this.products.filter(product => {
+        let itemsToShow = this.cart.products.filter(product => {
             return itemsInCart.includes(product.url)
         })
 
@@ -188,8 +191,6 @@ export default class Order {
 
         let totalPrice = 0;
 
-        console.log(itemsInCart)
-        console.log(itemsToShow)
         itemsToShow.forEach(desert => {
 
             let amount = clientOrder.filter(itemShow => {
@@ -200,10 +201,10 @@ export default class Order {
                 <div class="item">
                     <span class="left">${desert.title}  x${amount}</span>      
                     <span></span> 
-                    <span class="right">${desert.price} ₴</span>          
+                    <span class="right">${desert.price*amount} ₴</span>          
                 </div>
             `
-            totalPrice += desert.price
+            totalPrice += desert.price*amount
         });
 
         orderBody += `

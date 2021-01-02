@@ -10,7 +10,7 @@ let productPage = new Product();
 let catalogPage = new Catalog();
 let actionPage = new Action();
 let cartPage = new Cart();
-let orderPage = new Order();
+let orderPage = new Order(cartPage);
 
 let routs = {
     "home": '',

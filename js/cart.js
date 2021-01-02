@@ -215,7 +215,7 @@ export default class Cart {
         let counterCart = document.getElementById("cart-counter");
         counterCart.innerText = 0;
 
-        this.loadPage();
+        //this.loadPage();
     }
 
 }
