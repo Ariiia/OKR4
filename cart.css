@@ -1,15 +1,3 @@
- * {
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box; 
-    list-style:none;
-    text-decoration:none;
-}
-
-body{
-    padding-top:1rem;
-}
-
 div.menu{
     font-size: larger;
     margin-top: 4rem;
@@ -47,7 +35,7 @@ svg {
     z-index:999;
 }
 
-.loader {
+.svg-loader {
     width: 100%;
     height: 200px;
     padding-left: 50vw;
@@ -79,6 +67,8 @@ svg {
  }
 
  .horizontal-list li a{
+    /* padding-right:10px; */
+
     position: relative;
     transition:1s;
     letter-spacing:2px;
@@ -89,7 +79,8 @@ svg {
 header{
      padding:10px 100px; 
     box-sizing:border-box;
- 
+    /* width:100%;
+    height:100vh; */
     box-sizing: auto;
     white-space: nowrap;
     overflow-x: auto;
@@ -103,29 +94,30 @@ header{
 .delivery-container a{
     color:black;
 }
-
 ul a{
  color:black;
 }
 
-.logo img{
+
+ .logo img{
     max-width:30%;
 }
 .menu ul{
     display:flex;
 }
 
+
 .menu{
-    box-sizing: border-box;
-    height:auto;
+   box-sizing: border-box;
+   height:auto;
     margin:0 auto;
 
 }
 
 li{
-    display: inline-block;  
+    display: inline-block;
+    
 }
-
 .container { 
     display: flex;
     position: static;
@@ -137,6 +129,7 @@ li{
     margin-right: auto;
     margin-left: auto;
 }
+
 
 /* FOOTER */
 footer {   
@@ -153,11 +146,9 @@ footer {
     white-space: normal;
     font-family: Gilroy,Arial,sans-serif
 }
-
 footer a{
     color:white;
 }
-
 .footer-top-row {
     width: 100%;
     display: flex;
@@ -339,117 +330,115 @@ footer a{
 
 /* /FOOTER */
 main{
-    margin-top: 10rem;
-    margin-left:10%;
+  margin-top: 10rem;
+  margin-left:10%;
 }
 
 /* CART */
 .cart-top{
-    text-align: center;
+  text-align: center;
 }
 
+
 .cart-content {
-    padding: 20px;
-    position: relative;
+  padding: 20px;
+  position: relative;
 }
+
 
 
 .remove-from-cart {
-    position: relative;
-    margin-left:50px;
-    color: #f00;
-    line-height: 1;
-    font-size: 2rem;
+  position: relative;
+  margin-left:50px;
+  color: #f00;
+  line-height: 1;
+  font-size: 2rem;
 }
 
 .item-image{
-    vertical-align: middle;
-    border-style: none;
-    margin-bottom: 1rem;
+  vertical-align: middle;
+border-style: none;
+margin-bottom: 1rem;
 }
-
 .input-text{
-    text-align:center;
-    align-items: center;
+  text-align:center;
+  align-items: center;
 }
-
 .cart-description, .item-image{
-    width:calc(100%-1rem);
-    float:left;
+  width:calc(100%-1rem);
+  float:left;
 }
-
 .quantity{
-    align-items: center;
-    margin-top:1rem ;
-    margin-bottom: 1rem;
+  align-items: center;
+  margin-top:1rem ;
+  margin-bottom: 1rem;
 }
 
 .cart-desert{
-    border-bottom: 1px solid #b4b4b4;
+  border-bottom: 1px solid #b4b4b4;
 }
 
 .cart-text{
-    margin-right: 5rem;
+  margin-right: 5rem;
 }
-
 .cart-description{
   padding-left: 20rem;
 }
-
 .item-name{
     padding-right: 10px;
     display: inline-block;
 }
-
 .quantity{
-    width:100%;
+  /* border: 1px solid gray; */
+  width:100%;
 }
-
 .total strong{
-    margin-right:5rem;
+  margin-right:5rem ;
+  
 }
-
 .total{
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
-
 .cart-content{
-    font-size: 26px;
-    font-weight: 300;
-    color: #43474D;
-    margin-right: 20px;
+font-size: 26px;
+font-weight: 300;
+color: #43474D;
+margin-right: 20px;
 }
-
 .cart-text{
-    color:black;
+  color:black;
 }
 
 .input-text{
-    border: 1px solid #e68b8b;
-    font-size: 24px;
-    margin-left:-1rem;
+  border: 1px solid #e68b8b;
+  font-size: 24px;
+  margin-left:-1rem;
 }
 
 .button{
-    display: inline-block;
-    background-color: #f798bc;
-    border-radius: 6px;
-    font-size: 16px;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 12px 30px;
-    transition: all .5s;
+  display: inline-block;
+background-color: #f798bc;
+border-radius: 6px;
+font-size: 16px;
+color: #FFFFFF;
+text-decoration: none;
+padding: 12px 30px;
+transition: all .5s;
 }
-
 .checkout{
-    margin-left: inherit;
+margin-left: inherit;
+
+
 }
  
 .cart-top{
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    font-size: 2rem;
-    font-weight: 700;
+ 
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  
+  
 }
 
  

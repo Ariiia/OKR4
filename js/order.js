@@ -1,11 +1,12 @@
-import {sendRequest} from "./DBmain.js"
+import {getDB, sendRequest} from "./mainDB.js"
 
 export default class Order {
     constructor(){
         this.hash = "order";
     }
 
-    loadPage(subHash){
+    async loadPage(subHash){
+        this.products = await getDB('https://my-json-server.typicode.com/Ariiia/OKR4/products');
         if (subHash == null){
             this.loadValidation();
         }
@@ -125,6 +126,8 @@ export default class Order {
     }
 
     loadOrder(subHash, clientInformation) {
+        history.pushState(null, null, '#order/' + subHash)
+        const page = document.getElementById("page-content");
         page.innerHTML = `
             <p class="order-top">Мы готовим ваш заказ </p>
             <div class="order">
@@ -133,7 +136,7 @@ export default class Order {
                     ${this.orderedItems()}  
                 </div>
                 <span class="head">Ваши данные:</span>   
-                <div class="info">               
+                <div class="info-item">               
                     <div class="item">
                         <p class="left">Имя</p> 
                         <span></span> 
@@ -172,31 +175,49 @@ export default class Order {
     orderedItems() {
         let clientOrder = JSON.parse(localStorage.getItem("cart"));
 
-        orderBody = document.getElementById("ordered-deserts")
+        let itemsInCart = [];
+        clientOrder.forEach(item => {
+            itemsInCart.push(item.url);
+        });
 
-        clientOrder.forEach(desert => {
+        let itemsToShow = this.products.filter(product => {
+            return itemsInCart.includes(product.url)
+        })
+
+        let orderBody = '';
+
+        let totalPrice = 0;
+
+        console.log(itemsInCart)
+        console.log(itemsToShow)
+        itemsToShow.forEach(desert => {
+
+            let amount = clientOrder.filter(itemShow => {
+                return desert.url === itemShow.url;
+            })[0].amount;
+
             orderBody += `
                 <div class="item">
-                    <span class="left">${desert.url}</span>      
-                    <span>х ${desert.amount}</span> 
-                    <span class="right"> Цена 3 uah</span>          
+                    <span class="left">${desert.title}  x${amount}</span>      
+                    <span></span> 
+                    <span class="right">${desert.price} ₴</span>          
                 </div>
             `
+            totalPrice += desert.price
         });
 
         orderBody += `
-            <div class="info">
-                <span class="left">Подытог:</span>
+            <div class="info-item">
+                <span>Подытог:</span>
                 <span></span>
-                <span class="right">1000уан:</span>   
+                <span class="right">${totalPrice} ₴</span>   
             </div>
         `
-
         return orderBody;
     }
 
     showError(){
-        this.content.innerHTML = `
+        document.getElementById("page-content").innerHTML = `
         <div role="alert">
             Some problems with the data server. Sorry
         </div>

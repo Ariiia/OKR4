@@ -1,4 +1,4 @@
-import {getDB} from "./DBmain.js"
+import {getDB} from "./mainDB.js"
 
 export default class Home {
     constructor (){
