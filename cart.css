@@ -15,7 +15,6 @@ div.menu{
     transition:0.5s;
     padding: 30px 100px;
     z-index:999;
-
 }
 
 header{
@@ -23,8 +22,7 @@ header{
     top: 0;
     left:0;
     z-index:999;
-    background-color: rgba(255, 255, 255, 0.7);
-  
+    background-color: rgba(255, 255, 255, 0.7);  
 }
 
 svg {
@@ -53,13 +51,10 @@ svg {
 }
 
 .horizontal-list{
-
     position: relative;
     display: flex;
     justify-content: center;
     align-items:center;
-    
-
  }
  .horizontal-list li{
     position: relative;
@@ -67,14 +62,11 @@ svg {
  }
 
  .horizontal-list li a{
-    /* padding-right:10px; */
-
     position: relative;
     transition:1s;
     letter-spacing:2px;
     text-decoration: none; 
-
- }
+}
 
 header{
      padding:10px 100px; 
@@ -85,38 +77,37 @@ header{
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-
 }
+
 .logo-container{
     width:100%;
     height:100vh;
 }
+
 .delivery-container a{
     color:black;
 }
+
 ul a{
  color:black;
 }
 
-
- .logo img{
+.logo img{
     max-width:30%;
 }
+
 .menu ul{
     display:flex;
 }
-
 
 .menu{
    box-sizing: border-box;
    height:auto;
     margin:0 auto;
-
 }
 
 li{
-    display: inline-block;
-    
+    display: inline-block;   
 }
 .container { 
     display: flex;
@@ -146,9 +137,11 @@ footer {
     white-space: normal;
     font-family: Gilroy,Arial,sans-serif
 }
+
 footer a{
     color:white;
 }
+
 .footer-top-row {
     width: 100%;
     display: flex;
@@ -274,7 +267,6 @@ footer a{
 
 
 .link-ava span::before {
- 
     color: #fff;
     display: inline-block;
     font: normal normal normal 24px/1 "Material Design Icons";
@@ -330,114 +322,110 @@ footer a{
 
 /* /FOOTER */
 main{
-  margin-top: 10rem;
+    margin-top: 10rem;
 }
 
 /* CART */
 .cart-top{
-  text-align: center;
+    text-align: center;
 }
-
-
-.cart-content {
-  padding: 20px;
-  position: relative;
-}
-
-
 
 .remove-from-cart {
-  position: relative;
-  margin-left:50px;
-  color: #f00;
-  line-height: 1;
-  font-size: 2rem;
+    position: relative;
+    margin-left:50px;
+    color: #f00;
+    line-height: 1;
+    font-size: 2rem;
 }
 
 .item-image{
-  vertical-align: middle;
-border-style: none;
-margin-bottom: 1rem;
+    vertical-align: middle;
+    border-style: none;
+    margin-bottom: 1rem;
 }
 .input-text{
-  text-align:center;
-  align-items: center;
+    text-align:center;
+    align-items: center;
 }
 .cart-description, .item-image{
-  width:calc(100%-1rem);
-  float:left;
+    width:calc(100%-1rem);
+    float:left;
 }
 .quantity{
-  align-items: center;
-  margin-top:1rem ;
-  margin-bottom: 1rem;
+    align-items: center;
+    margin-top:1rem ;
+    margin-bottom: 1rem;
 }
 
 .cart-desert{
-  border-bottom: 1px solid #b4b4b4;
+    border-bottom: 1px solid #b4b4b4;
 }
 
 .cart-text{
-  margin-right: 5rem;
+    margin-right: 5rem;
 }
+
 .cart-description{
-  padding-left: 20rem;
+    padding-left: 20rem;
 }
+
 .item-name{
     padding-right: 10px;
     display: inline-block;
 }
+
 .quantity{
-  /* border: 1px solid gray; */
-  width:100%;
+    width:100%;
 }
+
 .total strong{
-  margin-right:5rem ;
-  
+     margin-right:5rem ;
 }
+
 .total{
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
 .cart-content{
-font-size: 26px;
-font-weight: 300;
-color: #43474D;
-margin-right: 20px;
+    padding: 20px;
+    position: relative;
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+    margin-left:10%;
 }
+
 .cart-text{
-  color:black;
+    color:black;
 }
 
 .input-text{
-  border: 1px solid #e68b8b;
-  font-size: 24px;
-  margin-left:-1rem;
+    border: 1px solid #e68b8b;
+    font-size: 24px;
+    margin-left:-1rem;
 }
 
 .button{
-  display: inline-block;
-background-color: #f798bc;
-border-radius: 6px;
-font-size: 16px;
-color: #FFFFFF;
-text-decoration: none;
-padding: 12px 30px;
-transition: all .5s;
+    display: inline-block;
+    background-color: #f798bc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
 }
+
 .checkout{
-margin-left: inherit;
-
-
+    margin-left: inherit;
 }
  
 .cart-top{
- 
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  font-size: 2rem;
-  font-weight: 700;
-  
-  
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
  
