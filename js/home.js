@@ -1,4 +1,4 @@
-import {getDB} from "./ManagmentDB.js"
+import {getDB} from "./DBmain.js"
 
 export default class Home {
     constructor (){
@@ -7,7 +7,7 @@ export default class Home {
     }
 
     loadPage(){
-        loadHome();
+        this.loadHome();
         return true;
     }
 
@@ -28,9 +28,10 @@ export default class Home {
                     <input type="radio" name="r" id="r2">
                     <input type="radio" name="r" id="r3">
             
-                    <div class="slide s1"><img src="images/bg1 - Copy.jpg" alt="bg1"></div>
-                    <div class="slide"><img src="images/bg_2 - Copy.jpg" alt="bg2"></div>
-                    <div class="slide"><img src="images/bg3 - Copy.jpg" alt="bg3"></div>
+                    <div class="slide s1"><a href="#action/cake_sale"><img src="images/bg1 - Copy.jpg" alt="bg1"></a></div>
+                    <div class="slide"><a href="#action/cherry_fever"><img src="images/bg_2 - Copy.jpg" alt="bg2"></a></div>
+                    <div class="slide"><a href="#action/new_year"><img src="images/bg3 - Copy.jpg" alt="bg3"></a></div>
+
                 </div>
             
                 <div class="navigation">

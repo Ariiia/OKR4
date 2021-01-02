@@ -10,9 +10,8 @@
    
     
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="home.css">
-    <link rel="stylesheet" type="text/css" href="product.css">
-    <link rel="stylesheet" type="text/css" href="catalogue.css">
+    <link rel="stylesheet" type="text/css" href="cart.css">
+
 
     <title>Lavli</title>
 </head>
@@ -51,8 +50,12 @@
                                 <li><a href="#catalog/Cakes">Торты</a></li>
                                 <li><a href="#catalog/Deserts">Десерты</a></li>
                                 <li><a href="#catalog/Cheesecakes">Чизкейки</a></li>                    
-                                <li><i class="fa" style="font-size:24px">&#xf07a;</i>
-                                    <span class="carting"> 0 </span></li>
+                                <li>
+                                    <a href="#cart">
+                                        <i class="fa" style="font-size:24px">&#xf07a;</i>
+                                        <span class="carting" id="cart-counter"> 0 </span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>                
                     </div>
@@ -64,7 +67,7 @@
 
     <main id="page-content">
 
-        <div class="svg-loader">
+        <div class="loader">
             <svg version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
                 <circle fill="black" stroke="none" cx="6" cy="50" r="6">

@@ -1,26 +1,39 @@
 import Home from "./home.js"
 import Product from "./product.js"
 import Catalog from "./catalog.js"
+import Action from "./action.js"
+import Cart from "./cart.js"
+import Order from "./order.js"
 
 let homePage = new Home();
 let productPage = new Product();
 let catalogPage = new Catalog();
+let actionPage = new Action();
+let cartPage = new Cart();
+let orderPage = new Order();
 
 let routs = {
     "home": '',
     "product": ['caramel', 'orangechoco', 'lavliheart', 'mangochia', 'strawberryyogurt',
                 'brauni', 'caramelyoghurt', 'strawberryyoghurt', 'cherry', 'marakuya'],
-    "catalog": ['Deserts', 'Cakes', 'Cheesecakes']
+    "catalog": ['Deserts', 'Cakes', 'Cheesecakes'],
+    "action": ['cherry_fever', 'new_year', 'cake_sale'],
+    "cart": ['caramel', 'orangechoco', 'lavliheart', 'mangochia', 'strawberryyogurt',
+            'brauni', 'caramelyoghurt', 'strawberryyoghurt', 'cherry', 'marakuya', 'clear'],
+    "order": ['1']
 }
 
 let pages = {
     "home": homePage,
     "product": productPage,
-    "catalog": catalogPage
+    "catalog": catalogPage,
+    "action": actionPage,
+    "cart": cartPage,
+    "order": orderPage
 }
 
 const loader = `
-    <div class="svg-loader">
+    <div class="loader">
     <svg version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
         <circle fill="black" stroke="none" cx="6" cy="50" r="6">
@@ -49,7 +62,7 @@ const loader = `
         </circle>
     </svg>
     </div>
-`
+    `
 
 function changePage(){
     document.getElementById("page-content").innerHTML = loader;
@@ -59,7 +72,6 @@ function changePage(){
 
     let hash;
     let subHash;
-    console.log(splitedUrl)
 
     if (splitedUrl.length == 2){
         hash = splitedUrl[0];
@@ -107,7 +119,7 @@ function loadContent(route, hash=null) {
     window.addEventListener('hashchange', () => changePage(homePage));
 
     homePage.loadHome();
+    cartPage.loadPage()
 
-    
 })();
 

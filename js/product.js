@@ -1,4 +1,4 @@
-import {getDB} from "./ManagmentDB.js"
+import {getDB} from "./DBmain.js"
 
 export default class Product {
     constructor(){
@@ -47,7 +47,7 @@ export default class Product {
                 <!-- Product Pricing -->
                 <div class="product-price">
                     <span>${cake.price} ₴</span>
-                    <a href="#" class="cart-btn">В корзину</a>
+                    <a href="#cart/${cake.url}" class="cart-btn">В корзину</a>
                 </div>
                 </div>
             </div>

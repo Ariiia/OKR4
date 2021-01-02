@@ -1,4 +1,4 @@
-import {getDB} from "./ManagmentDB.js"
+import {getDB} from "./DBmain.js"
 
 export default class Catalog {
     constructor(){
