@@ -186,7 +186,8 @@ export default class Cart {
                                 </a>
                                 <span class="cart-quantity">
                                     <div class="quantity">
-                                        <span class="cart-text" id="amount-${desert.url}">Количество: ${amount}</span>
+                                        <span class="cart-text">Количество:</span>
+                                        <span  id="amount-${desert.url}"> ${amount}</span>
                                         <!-- количество 
                                         <input type="number"  class="input-text"
                                             step="1" min="0" max="" 

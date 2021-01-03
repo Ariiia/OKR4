@@ -362,8 +362,8 @@ main{
 }
 
 .cart-desert{
-    border-bottom: 1px solid #b4b4b4;
-    display:table-cell;
+    width:-moz-available;
+    width: -webkit-fill-available;  /* For Chrome */
 }
 
 .cart-text{
